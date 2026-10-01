@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import AOS from "aos";
 
 const ExploreItems = () => {
   const [items, setItems] = useState([]);
@@ -18,6 +19,12 @@ const ExploreItems = () => {
 
     fetchItems();
   }, []);
+
+  useEffect(() => {
+    if (items.length) {
+      AOS.refreshHard();
+    }
+  }, [items, visibleItems, filter]);
 
   const filteredItems = [...items].sort((a, b) => {
     if (filter === "price_low_to_high") {
@@ -37,7 +44,7 @@ const ExploreItems = () => {
 
   return (
     <>
-      <div>
+      <div data-aos="fade-up">
         <select
           id="filter-items"
           value={filter}
@@ -55,6 +62,7 @@ const ExploreItems = () => {
           key={item.id}
           className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
           style={{ display: "block", backgroundSize: "cover" }}
+          data-aos="fade-up"
         >
           <div className="nft__item">
             <div className="author_list_pp">
@@ -63,19 +71,13 @@ const ExploreItems = () => {
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
               >
-                <img
-                  className="lazy"
-                  src={item.authorImage}
-                  alt=""
-                />
+                <img className="lazy" src={item.authorImage} alt="" />
                 <i className="fa fa-check"></i>
               </Link>
             </div>
 
             {item.expiryDate && (
-              <div className="de_countdown">
-                {item.expiryDate}
-              </div>
+              <div className="de_countdown">{item.expiryDate}</div>
             )}
 
             <div className="nft__item_wrap">
@@ -115,9 +117,7 @@ const ExploreItems = () => {
                 <h4>{item.title}</h4>
               </Link>
 
-              <div className="nft__item_price">
-                {item.price} ETH
-              </div>
+              <div className="nft__item_price">{item.price} ETH</div>
 
               <div className="nft__item_like">
                 <i className="fa fa-heart"></i>
@@ -129,7 +129,7 @@ const ExploreItems = () => {
       ))}
 
       {visibleItems < filteredItems.length && (
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-up">
           <button
             id="loadmore"
             className="btn-main lead"

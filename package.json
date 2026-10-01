@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://yourfriendlyneighborhooddeveloper.github.io/ryan-internship",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

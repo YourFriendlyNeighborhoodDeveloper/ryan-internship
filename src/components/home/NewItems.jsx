@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import AOS from "aos";
 
 const NewItems = () => {
   const [newItems, setNewItems] = useState([]);
@@ -17,15 +18,17 @@ const NewItems = () => {
     fetchNewItems();
   }, []);
 
+  useEffect(() => {
+    if (newItems.length) {
+      AOS.refreshHard();
+    }
+  }, [newItems]);
+
   return (
-    <section
-      id="section-items"
-      className="no-bottom"
-      data-aos="fade-up"
-    >
+    <section id="section-items" className="no-bottom">
       <div className="container">
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-12" data-aos="fade-up">
             <div className="text-center">
               <h2>New Items</h2>
               <div className="small-border bg-color-2"></div>
@@ -36,6 +39,7 @@ const NewItems = () => {
             <div
               className="col-lg-3 col-md-6 col-sm-6 col-xs-12"
               key={item.id}
+              data-aos="fade-up"
             >
               <div className="nft__item">
                 <div className="author_list_pp">
@@ -45,19 +49,13 @@ const NewItems = () => {
                     data-bs-placement="top"
                     title={`Creator: ${item.authorName || ""}`}
                   >
-                    <img
-                      className="lazy"
-                      src={item.authorImage}
-                      alt=""
-                    />
+                    <img className="lazy" src={item.authorImage} alt="" />
                     <i className="fa fa-check"></i>
                   </Link>
                 </div>
 
                 {item.expiryDate && (
-                  <div className="de_countdown">
-                    {item.expiryDate}
-                  </div>
+                  <div className="de_countdown">{item.expiryDate}</div>
                 )}
 
                 <div className="nft__item_wrap">
@@ -97,9 +95,7 @@ const NewItems = () => {
                     <h4>{item.title}</h4>
                   </Link>
 
-                  <div className="nft__item_price">
-                    {item.price} ETH
-                  </div>
+                  <div className="nft__item_price">{item.price} ETH</div>
 
                   <div className="nft__item_like">
                     <i className="fa fa-heart"></i>

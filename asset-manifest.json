@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ryan-internship/static/css/main.b52b9960.css",
-    "main.js": "/ryan-internship/static/js/main.354ff220.js",
+    "main.js": "/ryan-internship/static/js/main.90f36a98.js",
     "static/js/453.d9ec671c.chunk.js": "/ryan-internship/static/js/453.d9ec671c.chunk.js",
     "static/media/icofont.woff": "/ryan-internship/static/media/icofont.dad3accba068281878f1.woff",
     "static/media/icofont.woff2": "/ryan-internship/static/media/icofont.9c33516aab48c61e3081.woff2",
@@ -27,11 +27,11 @@
     "index.html": "/ryan-internship/index.html",
     "static/media/ethereum.svg": "/ryan-internship/static/media/ethereum.df265e367364f285053a1285ad8d418d.svg",
     "main.b52b9960.css.map": "/ryan-internship/static/css/main.b52b9960.css.map",
-    "main.354ff220.js.map": "/ryan-internship/static/js/main.354ff220.js.map",
+    "main.90f36a98.js.map": "/ryan-internship/static/js/main.90f36a98.js.map",
     "453.d9ec671c.chunk.js.map": "/ryan-internship/static/js/453.d9ec671c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b52b9960.css",
-    "static/js/main.354ff220.js"
+    "static/js/main.90f36a98.js"
   ]
 }

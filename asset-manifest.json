@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ryan-internship/static/css/main.b52b9960.css",
-    "main.js": "/ryan-internship/static/js/main.1f6649a6.js",
+    "main.js": "/ryan-internship/static/js/main.c27beff1.js",
     "static/js/453.d9ec671c.chunk.js": "/ryan-internship/static/js/453.d9ec671c.chunk.js",
     "static/media/icofont.woff": "/ryan-internship/static/media/icofont.dad3accba068281878f1.woff",
     "static/media/icofont.woff2": "/ryan-internship/static/media/icofont.9c33516aab48c61e3081.woff2",
@@ -11,7 +11,6 @@
     "static/media/et-line.svg": "/ryan-internship/static/media/et-line.613c7311d2d5a1dd7e49.svg",
     "static/media/fontawesome-webfont.eot": "/ryan-internship/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/ryan-internship/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/nftImage.jpg": "/ryan-internship/static/media/nftImage.0299eed903ee71c8c953.jpg",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/ryan-internship/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/ryan-internship/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/ElegantIcons.woff": "/ryan-internship/static/media/ElegantIcons.941bf29b415d3a9b7099.woff",
@@ -27,11 +26,11 @@
     "index.html": "/ryan-internship/index.html",
     "static/media/ethereum.svg": "/ryan-internship/static/media/ethereum.df265e367364f285053a1285ad8d418d.svg",
     "main.b52b9960.css.map": "/ryan-internship/static/css/main.b52b9960.css.map",
-    "main.1f6649a6.js.map": "/ryan-internship/static/js/main.1f6649a6.js.map",
+    "main.c27beff1.js.map": "/ryan-internship/static/js/main.c27beff1.js.map",
     "453.d9ec671c.chunk.js.map": "/ryan-internship/static/js/453.d9ec671c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b52b9960.css",
-    "static/js/main.1f6649a6.js"
+    "static/js/main.c27beff1.js"
   ]
 }
